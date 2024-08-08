@@ -3,3 +3,14 @@ mariadb-init
 postgres-init
 mutagen.yml.lock
 .vscode
+
+#ignoramos los archivos de Docker y el servidor
+tests
+.dockerignore
+.env
+docker-compose.yml
+docker.mk
+LICENSE.md
+Makefile
+README.md
+traefik.yml
