@@ -18,9 +18,11 @@
         "composer/installers": "^2.0",
         "drupal/admin_toolbar": "^3.5",
         "drupal/bootstrap5": "^4.0",
+        "drupal/color_field": "^3.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/layout_paragraphs": "^2.0",
         "drupal/paragraphs": "^1.18",
         "drupal/webform": "^6.2",
         "drush/drush": "^12.5"

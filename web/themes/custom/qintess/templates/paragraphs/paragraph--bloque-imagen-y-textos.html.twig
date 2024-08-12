@@ -1,18 +1,14 @@
-<div class="row">
-    <div class="col-6">
-        <h1>Imagen</h1>
-    </div>
-    <div class="col-6">
-        <h3>{{content.field_textos_promocion}}</h3>
-    </div>
-</div>
-
-
 {% block paragraph %}
-    <div {{ attributes.addClass(classes) }}>
-        {% block content %}
-            
-        {% endblock %}
-
-    </div>
+	<div {{ attributes.addClass(classes) }}>
+		{% block content %}
+			<div class="row">
+				<div class="col-6">
+					{{content.field_imagen_promocion}}
+				</div>
+				<div class="col-6">
+					<h3>{{content.field_textos_promocion}}</h3>
+				</div>
+			</div>
+		{% endblock %}
+	</div>
 {% endblock paragraph %}
