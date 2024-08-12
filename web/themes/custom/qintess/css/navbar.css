@@ -1,3 +1,7 @@
-body{
-    background-color: white !important;
-}   
+.navbar {
+    background-color: #FCFAFF !important;
+}
+
+.nav-link {
+    color: #222222 !important
+}

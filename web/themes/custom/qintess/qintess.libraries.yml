@@ -3,3 +3,4 @@ global-styling:
     theme:
       css/style.css: {}
       css/navbar.css: {}
+      css/global-style-qintess.css: {}
