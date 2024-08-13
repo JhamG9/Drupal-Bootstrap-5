@@ -6,7 +6,8 @@
 					{{ content.field_titulo_cabecera }}
 				</p>
 			</div>
-			<img src="{{ file_url(content.field_imagen_cabecera[0]['#media'].field_media_image.entity.uri.value) }}"/>
+			<img src="{{ file_url(content.field_imagen_cabecera[0]['#media'].field_media_image.entity.uri.value) }}"
+				alt="{{content.field_titulo_cabecera}}"/>
 
 		{# {{
 						content.field_imagen_cabecera
