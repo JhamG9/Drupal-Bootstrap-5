@@ -8,7 +8,7 @@ body {
     padding: 0px !important;
 }
 
-#block-qintess-page-title{
+#block-qintess-page-title {
     display: none;
 }
 
@@ -44,7 +44,7 @@ body {
     max-width: 100%;
 }
 
-.field--name-field-titulo-cabecera{
+.field--name-field-titulo-cabecera {
     position: absolute;
     font-size: 50px;
     font-weight: 700;
@@ -67,7 +67,7 @@ body {
         color: #6800FF;
     }
 
-    p{
+    p {
         margin: 0;
     }
 
@@ -111,5 +111,173 @@ body {
         left: 24px;
         line-height: 24px;
         max-width: 260px;
+    }
+}
+
+/* BLOQUE CONTACTO */
+.titulo-contacto {
+    font-weight: 700;
+    font-size: 50px;
+    color: #222222;
+    text-transform: uppercase;
+}
+
+.descripcion-contacto {
+    font-weight: 4000;
+    line-height: 26px;
+    font-size: 22px;
+    color: #222222;
+    padding-top: 15px;
+}
+
+.webform-submission-contact-form {
+    color: #6800FF;
+
+    label {
+        font-size: 22px;
+    }
+}
+
+.form-control {
+    color: #222222;
+    border-color: #6800FF;
+    border-radius: 18px;
+    background-color: transparent;
+    height: 48px;
+    font-size: 18px;
+}
+
+#edit-aceptar-terminos--description {
+    margin-top: -20px;
+    margin-left: 0px;
+    color: #222222;
+    font-size: 12px;
+}
+
+#edit-actions-submit {
+    background-color: #6800FF;
+    font-weight: 100;
+    font-size: 22px;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+}
+
+#edit-aceptar-terminos {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #6800FF;
+    --bs-form-check-bg: transparent;
+}
+
+.form-check-input:checked {
+    background-color: #6800FF;
+    border-color: #6800FF;
+}
+
+.contenedor-bloque-formulario-contacto {
+    padding-top: 50px;
+}
+
+#edit-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.form-required::after {
+    display: none !important;
+}
+
+#edit-message {
+    height: 185px;
+}
+
+.js-form-type-textfield .js-form-type-email {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 980px) {
+    .titulo-contacto {
+        font-size: 38px;
+    }
+
+    .descripcion-contacto {
+        padding-top: 0;
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    .contenedor-bloque-formulario-contacto {
+        padding-top: 25px;
+    }
+
+    .webform-submission-contact-form {
+        label {
+            font-size: 18px;
+        }
+    }
+
+    .form-control {
+        height: 38px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .titulo-contacto {
+        font-size: 30px;
+    }
+
+    .descripcion-contacto {
+        padding-top: 0;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .webform-submission-contact-form {
+        label {
+            font-size: 16px;
+        }
+    }
+
+    #edit-actions-submit {
+        font-size: 20px;
+        padding: 12px 28px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .titulo-contacto {
+        font-size: 16px;
+    }
+
+    .descripcion-contacto {
+        padding-top: 0;
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    .webform-submission-contact-form {
+        label {
+            font-size: 12px;
+        }
+    }
+
+    .form-control {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    #edit-message {
+        height: 110px;
+    }
+
+    #edit-actions-submit {
+        font-size: 14px;
+        padding: 12px 28px;
+    }
+
+    .js-form-type-textfield .js-form-type-email {
+        margin-bottom: 8px;
     }
 }
