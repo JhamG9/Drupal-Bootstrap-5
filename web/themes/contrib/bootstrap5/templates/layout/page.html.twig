@@ -97,8 +97,8 @@ set footer_classes = ' ' ~
   set content_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-lg-6' : ((page.sidebar_first or page.sidebar_second) ? 'col-12 col-lg-9' : 'col-12' )
    %}
 
-
-  <div class="{{ b5_top_container }}">
+{# TODOJ: Contenedor de todo el cuerpo #}
+  <div class="">
     {% if page.breadcrumb %}
       {{ page.breadcrumb }}
     {% endif %}

@@ -1,0 +1,17 @@
+{% block paragraph %}
+	{% block content %}
+		<div class="contenedor-cabecera">
+			<div class="subcontenedor-titulo">
+				<p>
+					{{ content.field_titulo_cabecera }}
+				</p>
+			</div>
+			<img src="{{ file_url(content.field_imagen_cabecera[0]['#media'].field_media_image.entity.uri.value) }}"/>
+
+		{# {{
+						content.field_imagen_cabecera
+					}} #}
+			{# <img src="https://s3-alpha-sig.figma.com/img/2404/c58d/85d949ea2a245c61c566ef2b73497cd7?Expires=1724630400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TY7Hx-nGParN7gshNH7~4u3aakLTlxRUYgTD0RE75RNxstYQn5dMKrTzhVdv8CzCconZDW6Bh1igd2ugVaXLHOdiYroqxvqN6CXBC0DNvAW-B6dpx2Odavt6jcC-yt0-nUG-ERY7Bdm11NYwPi1-ozuVZfB8xv8CPgy4FBOY82HxcowTjo8czKamF07sYT8fNlgw91YYteO8L-NxZZtTp3TFHoLCF7YPgYe3H27IvaSUkrGOOaYt7eizNYztiAUDoQUKTzLxnx1KWprJvKooeHVpno6Ks~2G7WGVZ4q0d4DPyoe1Msy8~1LlXTxWUE1RTBTHdQ4A~flami5nRNriJw__" class="imagen-contenedor" alt="imagen"> #}
+		</div>
+	{% endblock %}
+{% endblock paragraph %}
