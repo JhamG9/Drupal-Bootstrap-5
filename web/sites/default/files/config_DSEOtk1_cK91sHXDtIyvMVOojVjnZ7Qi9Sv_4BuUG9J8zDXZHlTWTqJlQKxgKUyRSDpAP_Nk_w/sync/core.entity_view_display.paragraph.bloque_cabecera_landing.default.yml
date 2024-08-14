@@ -1,0 +1,32 @@
+uuid: 69e753b2-daaf-4b74-ac6d-090754d8df9d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bloque_cabecera_landing.field_imagen_cabecera
+    - field.field.paragraph.bloque_cabecera_landing.field_titulo_cabecera
+    - paragraphs.paragraphs_type.bloque_cabecera_landing
+  module:
+    - text
+id: paragraph.bloque_cabecera_landing.default
+targetEntityType: paragraph
+bundle: bloque_cabecera_landing
+mode: default
+content:
+  field_imagen_cabecera:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_titulo_cabecera:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

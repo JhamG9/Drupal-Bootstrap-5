@@ -1,0 +1,7 @@
+parameters:
+  level: 9
+  checkMissingIterableValueType: false
+  reportUnmatchedIgnoredErrors: false
+  ignoreErrors:
+    # new static() is a best practice in Drupal.
+    - "#^Unsafe usage of new static#"

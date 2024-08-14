@@ -1,0 +1,21 @@
+uuid: 709e72a2-a5ea-4072-a4b7-67ec35c78a9f
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_texto_superior
+field_name: field_texto_superior
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

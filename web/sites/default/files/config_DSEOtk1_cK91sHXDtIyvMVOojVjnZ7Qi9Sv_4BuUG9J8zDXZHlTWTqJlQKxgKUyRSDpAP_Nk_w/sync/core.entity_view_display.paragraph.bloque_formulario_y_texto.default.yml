@@ -1,0 +1,33 @@
+uuid: 28d8e8f6-0364-4f33-9f92-e900f13ea35a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bloque_formulario_y_texto.field_formulario_bloque
+    - field.field.paragraph.bloque_formulario_y_texto.field_titulo_formulario
+    - paragraphs.paragraphs_type.bloque_formulario_y_texto
+  module:
+    - webform
+id: paragraph.bloque_formulario_y_texto.default
+targetEntityType: paragraph
+bundle: bloque_formulario_y_texto
+mode: default
+content:
+  field_formulario_bloque:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_titulo_formulario:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

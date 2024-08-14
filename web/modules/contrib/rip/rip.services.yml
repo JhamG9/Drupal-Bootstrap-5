@@ -1,0 +1,4 @@
+services:
+  rip.manager:
+    class: Drupal\rip\Batch\RipBatch
+    arguments: [ '@messenger', '@entity_type.manager', '@user.permissions' ]

@@ -1,0 +1,43 @@
+uuid: 7e73fbee-149e-476f-a5f2-b0cd1be0ddf3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bloque_imagen_y_textos.field_imagen_promocion
+    - field.field.paragraph.bloque_imagen_y_textos.field_textos_promocion
+    - paragraphs.paragraphs_type.bloque_imagen_y_textos
+  module:
+    - field_layout
+    - layout_discovery
+    - media_library
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.bloque_imagen_y_textos.default
+targetEntityType: paragraph
+bundle: bloque_imagen_y_textos
+mode: default
+content:
+  field_imagen_promocion:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_textos_promocion:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

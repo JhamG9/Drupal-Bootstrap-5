@@ -1,0 +1,22 @@
+uuid: 90cb73d1-a0a6-4da5-91e5-f023dcf334b1
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - qintess
+_core:
+  default_config_hash: ooj9k4cOCz-bF81ug2jFFutg5f8APf1HXWe19ClS5lg
+id: qintess_messages
+theme: qintess
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensajes
+  label_display: '0'
+  provider: system
+visibility: {  }

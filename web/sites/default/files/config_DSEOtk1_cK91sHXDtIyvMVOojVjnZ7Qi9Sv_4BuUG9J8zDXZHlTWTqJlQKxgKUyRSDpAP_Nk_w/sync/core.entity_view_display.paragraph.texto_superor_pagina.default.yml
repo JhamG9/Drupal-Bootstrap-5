@@ -1,0 +1,21 @@
+uuid: 27329998-7e67-4d5b-a0b6-4abea4365bc6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.texto_superor_pagina.field_texto_superior
+    - paragraphs.paragraphs_type.texto_superor_pagina
+id: paragraph.texto_superor_pagina.default
+targetEntityType: paragraph
+bundle: texto_superor_pagina
+mode: default
+content:
+  field_texto_superior:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -43,7 +43,7 @@
  */
 #}
 {%
-set nav_classes = 'navbar navbar-expand-lg' ~
+set nav_classes = 'navbar navbar-expand-lg nav-qintess' ~
   (b5_navbar_schema != 'none' ? " navbar-#{b5_navbar_schema}" : ' ') ~
   (b5_navbar_schema != 'none' ? (b5_navbar_schema == 'dark' ? ' text-light' : ' text-dark' ) : ' ') ~
   (b5_navbar_bg_schema != 'none' ? " bg-#{b5_navbar_bg_schema}" : ' ')
@@ -97,8 +97,8 @@ set footer_classes = ' ' ~
   set content_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-lg-6' : ((page.sidebar_first or page.sidebar_second) ? 'col-12 col-lg-9' : 'col-12' )
    %}
 
-
-  <div class="{{ b5_top_container }}">
+  {# TODOJ: #}
+  <div class="container-qintess">
     {% if page.breadcrumb %}
       {{ page.breadcrumb }}
     {% endif %}

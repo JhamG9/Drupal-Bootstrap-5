@@ -1,0 +1,42 @@
+uuid: b3350995-b597-4c32-b69b-636726049140
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bloque_formulario_contacto.field_descripcion_contacto
+    - field.field.paragraph.bloque_formulario_contacto.field_formulario_contacto
+    - paragraphs.paragraphs_type.bloque_formulario_contacto
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+    - webform
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.bloque_formulario_contacto.default
+targetEntityType: paragraph
+bundle: bloque_formulario_contacto
+mode: default
+content:
+  field_descripcion_contacto:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_formulario_contacto:
+    type: webform_entity_reference_select
+    weight: 1
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

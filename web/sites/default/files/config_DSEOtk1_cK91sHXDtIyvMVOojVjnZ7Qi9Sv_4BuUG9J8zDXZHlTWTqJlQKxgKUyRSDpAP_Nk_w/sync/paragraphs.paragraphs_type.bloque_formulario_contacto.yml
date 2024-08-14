@@ -1,0 +1,10 @@
+uuid: bccff9c4-09f3-4486-b839-398b99424930
+langcode: es
+status: true
+dependencies: {  }
+id: bloque_formulario_contacto
+label: 'Bloque formulario contacto'
+icon_uuid: null
+icon_default: null
+description: 'Bloque de contacto'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: ece51ac0-8945-4c15-ab58-e1d80c3d3dc2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titulo_formulario
+    - paragraphs.paragraphs_type.bloque_formulario_y_texto
+id: paragraph.bloque_formulario_y_texto.field_titulo_formulario
+field_name: field_titulo_formulario
+entity_type: paragraph
+bundle: bloque_formulario_y_texto
+label: 'Titulo formulario'
+description: 'Añade el titulo del bloque, en este caso formulario'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Valor predeterminado del bloque titulo y formulario'
+default_value_callback: ''
+settings: {  }
+field_type: string

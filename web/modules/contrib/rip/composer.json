@@ -1,0 +1,23 @@
+{
+    "name": "drupal/rip",
+    "description": "Simplifies the process of removing invalid permissions.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/rip",
+    "authors": [
+        {
+            "name": "Salim Qazizada (msq)",
+            "homepage": "https://www.drupal.org/u/msq",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Simon Bäse (simonbaese)",
+            "homepage": "https://www.drupal.org/u/simonbaese",
+            "role": "Co-Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/rip",
+        "source": "https://git.drupalcode.org/project/rip"
+    }
+}

@@ -1,0 +1,27 @@
+uuid: 5138f5c9-d875-4c71-b182-51c3c7bb9b46
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_titulo_cabecera
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.bloque_cabecera_landing
+  module:
+    - text
+id: paragraph.bloque_cabecera_landing.field_titulo_cabecera
+field_name: field_titulo_cabecera
+entity_type: paragraph
+bundle: bloque_cabecera_landing
+label: 'Titulo cabecera'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '<p>Titulo de la <strong>cabecera</strong></p>'
+    format: basic_html
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

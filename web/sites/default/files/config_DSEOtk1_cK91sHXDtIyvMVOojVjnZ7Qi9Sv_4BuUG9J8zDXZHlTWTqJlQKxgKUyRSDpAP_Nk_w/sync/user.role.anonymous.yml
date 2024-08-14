@@ -1,0 +1,30 @@
+uuid: c2968028-7ca1-49f7-a87f-7373da9df5f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - paragraphs_type_permissions
+    - search
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'Usuario anónimo'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'view media'
+  - 'view paragraph content bloque_formulario_y_texto'
+  - 'view paragraph content bloque_imagen_y_textos'
+  - 'view paragraph content texto_superor_pagina'

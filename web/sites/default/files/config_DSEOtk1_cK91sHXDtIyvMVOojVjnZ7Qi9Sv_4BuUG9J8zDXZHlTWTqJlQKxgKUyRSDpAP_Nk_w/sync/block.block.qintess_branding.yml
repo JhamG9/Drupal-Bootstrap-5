@@ -1,0 +1,25 @@
+uuid: 81ba56d1-8412-4741-baf0-68f75291a477
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - qintess
+_core:
+  default_config_hash: Xs2gFyB-TfSxUJ2untuJN1eZxIJW8W8JmWuQ3ARvcDE
+id: qintess_branding
+theme: qintess
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 550392c8-6493-416b-874e-74a296bea22e
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - qintess
+_core:
+  default_config_hash: m3ZDxb8sizD5Wukts8svf9bezchFsJieuqbsxL86smU
+id: qintess_account_menu
+theme: qintess
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menú de cuenta de usuario'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

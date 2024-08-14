@@ -1,0 +1,20 @@
+uuid: 20a45c5f-259f-419b-b2b0-5f3266701648
+langcode: es
+status: true
+dependencies:
+  theme:
+    - qintess
+_core:
+  default_config_hash: C1-9mheEQpt4Z-cjzI9xd6aKSbYfszIAdaF5flhZ9qU
+id: qintess_local_actions
+theme: qintess
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

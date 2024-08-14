@@ -1,0 +1,21 @@
+uuid: 03e9adec-38ae-4277-bbd0-58beab79bcd7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_texto_superior
+    - paragraphs.paragraphs_type.texto_superor_pagina
+id: paragraph.texto_superor_pagina.field_texto_superior
+field_name: field_texto_superior
+entity_type: paragraph
+bundle: texto_superor_pagina
+label: 'Texto superior'
+description: 'Permite añadir el texto que acompaña en la parte superior de la página.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'No te pierdas nuestras ofertas de hoy'
+default_value_callback: ''
+settings: {  }
+field_type: string

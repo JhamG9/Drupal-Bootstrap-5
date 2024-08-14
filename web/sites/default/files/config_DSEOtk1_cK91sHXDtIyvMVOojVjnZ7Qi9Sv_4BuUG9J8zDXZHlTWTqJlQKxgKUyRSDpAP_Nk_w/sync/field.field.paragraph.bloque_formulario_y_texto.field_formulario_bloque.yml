@@ -1,0 +1,25 @@
+uuid: af2b92b6-d7fe-4d89-bdf8-f5218ace70cd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_formulario_bloque
+    - paragraphs.paragraphs_type.bloque_formulario_y_texto
+  module:
+    - webform
+id: paragraph.bloque_formulario_y_texto.field_formulario_bloque
+field_name: field_formulario_bloque
+entity_type: paragraph
+bundle: bloque_formulario_y_texto
+label: 'Formulario bloque'
+description: 'Permite añadir un formulario, desde un listado, previamente creado'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

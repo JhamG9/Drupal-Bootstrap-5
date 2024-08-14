@@ -1,0 +1,10 @@
+uuid: f0d865db-8342-47ed-be57-7b29da428e12
+langcode: es
+status: true
+dependencies: {  }
+id: bloque_formulario_y_texto
+label: 'Bloque formulario y texto'
+icon_uuid: null
+icon_default: null
+description: 'Permite añadir un formulario con un texto en la parte superior'
+behavior_plugins: {  }

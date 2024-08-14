@@ -1,0 +1,19 @@
+uuid: 5dd828ff-b9f6-4aef-900a-0869f41715ec
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_titulo_cabecera
+field_name: field_titulo_cabecera
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

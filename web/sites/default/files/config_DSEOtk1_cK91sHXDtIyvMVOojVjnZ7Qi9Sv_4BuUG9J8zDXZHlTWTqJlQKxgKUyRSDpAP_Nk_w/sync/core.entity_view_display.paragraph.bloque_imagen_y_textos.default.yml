@@ -1,0 +1,32 @@
+uuid: d9c2dc03-648a-49c3-93c7-72c4fdf4a5a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bloque_imagen_y_textos.field_imagen_promocion
+    - field.field.paragraph.bloque_imagen_y_textos.field_textos_promocion
+    - paragraphs.paragraphs_type.bloque_imagen_y_textos
+  module:
+    - text
+id: paragraph.bloque_imagen_y_textos.default
+targetEntityType: paragraph
+bundle: bloque_imagen_y_textos
+mode: default
+content:
+  field_imagen_promocion:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_textos_promocion:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

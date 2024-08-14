@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains rip.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ *
+ * @phpstan-ignore-next-line
+ */
+function rip_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.rip':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Simplifies the process of removing invalid permissions.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

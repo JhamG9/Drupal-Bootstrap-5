@@ -1,0 +1,32 @@
+uuid: 5aa7ef2f-ab57-4aca-83eb-4d734a95854c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_formulario_contacto
+    - paragraphs.paragraphs_type.bloque_formulario_contacto
+    - webform.webform.contact
+  module:
+    - webform
+id: paragraph.bloque_formulario_contacto.field_formulario_contacto
+field_name: field_formulario_contacto
+entity_type: paragraph
+bundle: bloque_formulario_contacto
+label: 'Formulario contacto'
+description: 'Formulario de contacto'
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 3975428d-35b7-4065-99a0-3082d90f01ea
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

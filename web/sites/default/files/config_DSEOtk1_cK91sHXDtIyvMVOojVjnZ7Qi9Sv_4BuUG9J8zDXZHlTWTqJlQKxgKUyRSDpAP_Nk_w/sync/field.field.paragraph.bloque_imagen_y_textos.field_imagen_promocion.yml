@@ -1,0 +1,29 @@
+uuid: de21129e-0cd8-4ceb-b051-207a54cd3f25
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imagen_promocion
+    - media.type.image
+    - paragraphs.paragraphs_type.bloque_imagen_y_textos
+id: paragraph.bloque_imagen_y_textos.field_imagen_promocion
+field_name: field_imagen_promocion
+entity_type: paragraph
+bundle: bloque_imagen_y_textos
+label: 'Imagen promocion'
+description: 'Permite añadir la imagen del producto promocionado'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

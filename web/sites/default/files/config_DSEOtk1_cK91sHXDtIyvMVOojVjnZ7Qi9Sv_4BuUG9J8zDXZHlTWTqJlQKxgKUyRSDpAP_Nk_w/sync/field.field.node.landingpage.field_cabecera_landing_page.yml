@@ -1,0 +1,43 @@
+uuid: 02fdf0b4-b51d-465f-be6f-231d4f032e9b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cabecera_landing_page
+    - node.type.landingpage
+    - paragraphs.paragraphs_type.bloque_cabecera_landing
+  module:
+    - entity_reference_revisions
+id: node.landingpage.field_cabecera_landing_page
+field_name: field_cabecera_landing_page
+entity_type: node
+bundle: landingpage
+label: 'Cabecera Landing Page'
+description: 'Cabecera de una Landing Page'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      bloque_cabecera_landing: bloque_cabecera_landing
+    negate: 0
+    target_bundles_drag_drop:
+      bloque_cabecera_landing:
+        weight: 6
+        enabled: true
+      bloque_cabecera_landing_page:
+        weight: 5
+        enabled: false
+      bloque_formulario_y_texto:
+        weight: 5
+        enabled: false
+      bloque_imagen_y_textos:
+        weight: 6
+        enabled: false
+      texto_superor_pagina:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

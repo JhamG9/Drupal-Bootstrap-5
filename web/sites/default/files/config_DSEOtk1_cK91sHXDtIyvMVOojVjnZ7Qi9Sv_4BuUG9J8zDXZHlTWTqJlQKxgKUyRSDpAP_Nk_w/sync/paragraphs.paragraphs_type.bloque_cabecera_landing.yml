@@ -1,0 +1,10 @@
+uuid: 46779378-9329-44e5-b0ba-89c4ff0c7763
+langcode: es
+status: true
+dependencies: {  }
+id: bloque_cabecera_landing
+label: 'Bloque cabecera landing'
+icon_uuid: null
+icon_default: null
+description: 'Bloque Cabecera Landing Page'
+behavior_plugins: {  }

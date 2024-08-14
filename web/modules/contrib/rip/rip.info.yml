@@ -1,0 +1,11 @@
+name: Remove Invalid Permissions
+type: module
+description: "Simplifies the process of removing invalid permissions."
+package: Development
+core_version_requirement: ^8 || ^9 || ^10
+configure: rip.remove_invalid_permissions
+
+# Information added by Drupal.org packaging script on 2023-12-18
+version: '1.1.2'
+project: 'rip'
+datestamp: 1702920869

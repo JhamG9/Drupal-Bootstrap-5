@@ -1,0 +1,20 @@
+uuid: 55aabb31-d4f2-4e9e-b980-e0d140806ed2
+langcode: es
+status: true
+dependencies:
+  theme:
+    - qintess
+_core:
+  default_config_hash: uZnlC_97dNTLKeWHkviXqztC4tQl5kD6WHg3pOgFvpA
+id: qintess_page_title
+theme: qintess
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: 1bf57849-1671-416e-a189-3644da86db98
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_descripcion_contacto
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.bloque_formulario_contacto
+  module:
+    - text
+id: paragraph.bloque_formulario_contacto.field_descripcion_contacto
+field_name: field_descripcion_contacto
+entity_type: paragraph
+bundle: bloque_formulario_contacto
+label: 'Descripcion contacto'
+description: 'Descripción del bloque de contacto'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

@@ -1,0 +1,41 @@
+uuid: 8bcb5fba-2796-4534-9063-351c36355679
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bloque_formulario_y_texto.field_formulario_bloque
+    - field.field.paragraph.bloque_formulario_y_texto.field_titulo_formulario
+    - paragraphs.paragraphs_type.bloque_formulario_y_texto
+  module:
+    - field_layout
+    - layout_discovery
+    - webform
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.bloque_formulario_y_texto.default
+targetEntityType: paragraph
+bundle: bloque_formulario_y_texto
+mode: default
+content:
+  field_formulario_bloque:
+    type: webform_entity_reference_select
+    weight: 1
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+  field_titulo_formulario:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

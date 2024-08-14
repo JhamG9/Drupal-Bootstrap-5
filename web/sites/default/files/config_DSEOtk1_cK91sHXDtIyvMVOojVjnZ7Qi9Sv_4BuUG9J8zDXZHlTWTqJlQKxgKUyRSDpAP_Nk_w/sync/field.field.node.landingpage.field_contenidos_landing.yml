@@ -1,0 +1,49 @@
+uuid: 5c9d6315-4936-4d35-a6ca-d92292bab70f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contenidos_landing
+    - node.type.landingpage
+    - paragraphs.paragraphs_type.bloque_formulario_contacto
+    - paragraphs.paragraphs_type.bloque_formulario_y_texto
+    - paragraphs.paragraphs_type.bloque_imagen_y_textos
+    - paragraphs.paragraphs_type.texto_superor_pagina
+  module:
+    - entity_reference_revisions
+id: node.landingpage.field_contenidos_landing
+field_name: field_contenidos_landing
+entity_type: node
+bundle: landingpage
+label: 'Contenidos Landing'
+description: 'Permite añadir los bloques de contenido esta pagina, en este caso bloques de paragraph'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      texto_superor_pagina: texto_superor_pagina
+      bloque_imagen_y_textos: bloque_imagen_y_textos
+      bloque_formulario_y_texto: bloque_formulario_y_texto
+      bloque_formulario_contacto: bloque_formulario_contacto
+    negate: 0
+    target_bundles_drag_drop:
+      bloque_cabecera_landing:
+        weight: 6
+        enabled: false
+      bloque_formulario_contacto:
+        weight: 7
+        enabled: true
+      bloque_formulario_y_texto:
+        weight: -5
+        enabled: true
+      bloque_imagen_y_textos:
+        weight: -6
+        enabled: true
+      texto_superor_pagina:
+        weight: -7
+        enabled: true
+field_type: entity_reference_revisions

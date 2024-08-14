@@ -1,0 +1,25 @@
+uuid: 7d08ec3a-ee89-4754-b93d-06951bb6fe03
+langcode: es
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landingpage.field_cabecera_landing_page
+    - field.field.node.landingpage.field_contenidos_landing
+    - node.type.landingpage
+  module:
+    - user
+id: node.landingpage.teaser
+targetEntityType: node
+bundle: landingpage
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cabecera_landing_page: true
+  field_contenidos_landing: true
+  langcode: true

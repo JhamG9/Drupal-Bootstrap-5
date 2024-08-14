@@ -1,0 +1,27 @@
+uuid: c06b34cb-6071-4ef0-9068-b70bb6133582
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - qintess
+_core:
+  default_config_hash: TgwTwRl1B52JpaFt4a-zq_sOgFLtfX08SX-8dLs3Iao
+id: qintess_footer
+theme: qintess
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Pie de página'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

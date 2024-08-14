@@ -1,0 +1,7 @@
+rip.remove_invalid_permissions:
+  path: '/admin/people/rip'
+  defaults:
+    _form: '\Drupal\rip\Form\RipForm'
+    _title: 'Remove Invalid Permissions'
+  requirements:
+    _permission: 'administer permissions'

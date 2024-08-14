@@ -1,0 +1,10 @@
+uuid: b5415f41-323b-4792-bd3e-29b498d7856b
+langcode: es
+status: true
+dependencies: {  }
+id: bloque_imagen_y_textos
+label: 'Bloque Imagen y textos'
+icon_uuid: null
+icon_default: null
+description: 'Permite añadir un bloque con la imagen del producto y los textos de la promocion'
+behavior_plugins: {  }

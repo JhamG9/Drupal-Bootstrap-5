@@ -1,0 +1,29 @@
+uuid: d660d08b-312a-4d74-9604-2522a3dec0d0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_imagen_cabecera
+    - media.type.image
+    - paragraphs.paragraphs_type.bloque_cabecera_landing
+id: paragraph.bloque_cabecera_landing.field_imagen_cabecera
+field_name: field_imagen_cabecera
+entity_type: paragraph
+bundle: bloque_cabecera_landing
+label: 'Imagen cabecera'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

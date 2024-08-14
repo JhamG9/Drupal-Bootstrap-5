@@ -1,0 +1,27 @@
+uuid: c609c5c1-eee0-4bcb-8da1-4c3ff3a59bda
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - qintess
+_core:
+  default_config_hash: XETX1Ijzxxa_dD8F9K9kTdv8IcLF6GRULAYUCubnAPg
+id: qintess_main_navigation
+theme: qintess
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: cdf935d0-e278-4d0e-902c-ada52ca557cb
+langcode: es
+status: true
+dependencies:
+  theme:
+    - qintess
+_core:
+  default_config_hash: u32Fiku2_3wRcyk1fLz8CfGCtcqT6-RBqgGcqUpwOQQ
+id: qintess_local_tasks
+theme: qintess
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

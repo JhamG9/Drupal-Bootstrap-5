@@ -1,0 +1,10 @@
+uuid: 7a59a600-dd91-4135-9789-5f64d589d057
+langcode: es
+status: true
+dependencies: {  }
+id: texto_superor_pagina
+label: 'Texto superor página'
+icon_uuid: null
+icon_default: null
+description: 'Permite añadir la frase o texto que acompaña al título en la página.'
+behavior_plugins: {  }

@@ -1,0 +1,31 @@
+uuid: 40e3175f-2cc1-4d38-9339-395157a8a8e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.texto_superor_pagina.field_texto_superior
+    - paragraphs.paragraphs_type.texto_superor_pagina
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.texto_superor_pagina.default
+targetEntityType: paragraph
+bundle: texto_superor_pagina
+mode: default
+content:
+  field_texto_superior:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

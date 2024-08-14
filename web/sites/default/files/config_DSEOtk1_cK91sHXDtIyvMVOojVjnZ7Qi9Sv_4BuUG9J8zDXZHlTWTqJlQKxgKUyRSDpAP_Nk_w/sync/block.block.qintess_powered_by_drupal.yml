@@ -1,0 +1,22 @@
+uuid: 203fc757-48e1-4934-bab6-35a36618167f
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - qintess
+_core:
+  default_config_hash: J6krQ8Js43T5jQEy9zWqorjUBhxtMxf_woIUcwoYZbE
+id: qintess_powered_by_drupal
+theme: qintess
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

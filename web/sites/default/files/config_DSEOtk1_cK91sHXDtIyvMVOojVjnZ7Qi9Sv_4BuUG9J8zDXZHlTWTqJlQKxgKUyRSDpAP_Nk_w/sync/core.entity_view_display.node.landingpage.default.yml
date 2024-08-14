@@ -1,0 +1,38 @@
+uuid: 0b079814-39e8-4ba1-baf6-8f468169fe03
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.landingpage.field_cabecera_landing_page
+    - field.field.node.landingpage.field_contenidos_landing
+    - node.type.landingpage
+  module:
+    - entity_reference_revisions
+    - layout_paragraphs
+    - user
+id: node.landingpage.default
+targetEntityType: node
+bundle: landingpage
+mode: default
+content:
+  field_cabecera_landing_page:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_contenidos_landing:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  links: true

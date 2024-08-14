@@ -1,0 +1,6 @@
+services:
+  rip.commands:
+    class: Drupal\rip\Commands\RipCommands
+    arguments: [ '@entity_type.manager', '@user.permissions' ]
+    tags:
+      - { name: drush.command }

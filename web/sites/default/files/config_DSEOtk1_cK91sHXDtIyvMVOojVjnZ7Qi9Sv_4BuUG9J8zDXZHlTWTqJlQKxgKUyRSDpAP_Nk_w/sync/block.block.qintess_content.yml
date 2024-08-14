@@ -1,0 +1,22 @@
+uuid: ba6d9999-3cdb-42da-a52e-2a8aa5041036
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - qintess
+_core:
+  default_config_hash: yGvemH8y_7zBkVdCACPMCokEovBaOFX6Pj0yzhhvqi8
+id: qintess_content
+theme: qintess
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

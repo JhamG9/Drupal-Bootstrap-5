@@ -1,0 +1,5 @@
+user.rip:
+  title: 'RIP'
+  route_name: rip.remove_invalid_permissions
+  base_route: entity.user.collection
+  weight: 111

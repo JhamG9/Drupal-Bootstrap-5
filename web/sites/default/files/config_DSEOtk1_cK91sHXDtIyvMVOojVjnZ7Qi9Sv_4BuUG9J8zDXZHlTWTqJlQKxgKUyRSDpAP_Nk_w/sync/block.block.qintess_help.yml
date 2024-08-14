@@ -1,0 +1,22 @@
+uuid: e66a93ca-4afd-4c7e-a16f-62eaa79c747e
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - qintess
+_core:
+  default_config_hash: 9tamSJChcK9NphcEhfTFTxHqxOgk7BV9PVxqKde549k
+id: qintess_help
+theme: qintess
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

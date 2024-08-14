@@ -1,7 +1,16 @@
 .navbar {
     background-color: #FCFAFF !important;
+    padding-bottom: 0;
 }
 
 .nav-link {
     color: #222222 !important
+}
+
+.nav-qintess {
+    .container {
+        padding-left: 0;
+        border-bottom: 1px solid #222222;
+    }
+
 }
