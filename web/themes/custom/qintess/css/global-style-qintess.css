@@ -157,7 +157,7 @@ body {
 
 #edit-actions-submit {
     background-color: #6800FF;
-    font-weight: 100;
+    font-weight: bold;
     font-size: 22px;
     border: none;
     padding: 15px 30px;
@@ -282,4 +282,42 @@ body {
     .js-form-type-textfield .js-form-type-email {
         margin-bottom: 8px;
     }
+}
+
+/* NEWSLETTER SUSCRIPTION */
+.content-description {
+    max-width: 577px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.title-description {
+    font-weight: 700;
+    font-size: 22px;
+    color: #222222;
+}
+
+.text-description {
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.content-inputs {
+    max-width: 490px;
+    padding: 0 10px;
+}
+
+.input-suscribe {
+    font-size: 16px !important;
+
+    @media screen and (max-width: 980px) {
+        font-size: 14px !important;
+
+    }
+}
+
+.input-suscribe::placeholder {
+    color: #6800FF !important;
 }
