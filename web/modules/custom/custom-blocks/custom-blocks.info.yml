@@ -1,0 +1,7 @@
+name: 'Custom Blocks'
+type: module
+description: 'Módulo que contiene bloques personalizados.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+dependencies:
+  - node:node
