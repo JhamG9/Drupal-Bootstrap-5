@@ -331,3 +331,14 @@ body {
 .input-suscribe::placeholder {
     color: #6800FF !important;
 }
+
+
+/* .div-icon-share {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    svg{
+        width: 100% !important;
+        height: 100% !important;
+    }
+} */
