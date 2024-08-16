@@ -1,0 +1,12 @@
+name: SCSS/Less Compiler
+description: Automatically compiles scss/less files into css
+package: Development
+configure: system.performance_settings
+
+type: module
+core_version_requirement: ^8.8 || ^9 || ^10
+
+# Information added by Drupal.org packaging script on 2023-10-06
+version: '8.x-1.2'
+project: 'scss_compiler'
+datestamp: 1696587773

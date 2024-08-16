@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the SCSS Compiler module.
+ */
+
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_requirements().
+ */
+function scss_compiler_requirements($phase) {
+  $requirements = [];
+
+  if ($phase === 'runtime') {
+    $description = '';
+    if (!$installed = (class_exists('ScssPhp\ScssPhp\Compiler') || file_exists(DRUPAL_ROOT . '/libraries/scssphp/scss.inc.php'))) {
+      $url = Url::fromUri('https://github.com/scssphp/scssphp/releases', ['external' => TRUE]);
+      $link = Link::fromTextAndUrl(t('Download'), $url);
+      $description = t('SCSS compiler library not found. Download library and place it to drupal libraries folder. @link', [
+        '@link' => $link->toString(),
+      ]);
+    }
+    $requirements['scss_compiler'] = [
+      'title'       => t('SCSS Compiler library'),
+      'value'       => $installed ? t('Installed') : t('Not installed'),
+      'severity'    => $installed ? REQUIREMENT_OK : REQUIREMENT_ERROR,
+      'description' => $description,
+    ];
+  }
+  return $requirements;
+}
+
+/**
+ * Implements hook_install().
+ */
+function scss_compiler_install() {
+  // Set the weight to 1.
+  // @see https://www.drupal.org/project/scss_compiler/issues/3183083.
+  module_set_weight('scss_compiler', 1);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function scss_compiler_uninstall() {
+  Drupal::service('file_system')->deleteRecursive('public://scss_compiler');
+}
+
+/**
+ * Set the weight to 1.
+ */
+function scss_compiler_update_8001() {
+  // @see https://www.drupal.org/project/scss_compiler/issues/3183083.
+  module_set_weight('scss_compiler', 1);
+
+  // Setup default compiler if configuration is empty.
+  $config = Drupal::configFactory()->getEditable('scss_compiler.settings');
+  if ($config && $config->get('plugins') === NULL) {
+    $config->set('plugins', [
+      'scss' => 'scss_compiler_scssphp',
+    ]);
+    $config->save(TRUE);
+  }
+}
+
+/**
+ * Set flush cache behaviour.
+ */
+function scss_compiler_update_8002() {
+  $config = Drupal::configFactory()->getEditable('scss_compiler.settings');
+  if ($config && $config->get('flush_cache_type') === NULL) {
+    $config->set('flush_cache_type', 'default');
+    $config->save(TRUE);
+  }
+}

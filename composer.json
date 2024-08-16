@@ -27,6 +27,7 @@
         "drupal/metatag": "^2.0",
         "drupal/paragraphs": "^1.18",
         "drupal/rip": "^1.1",
+        "drupal/scss_compiler": "^1.2",
         "drupal/webform": "^6.2",
         "drush/drush": "^12.5"
     },

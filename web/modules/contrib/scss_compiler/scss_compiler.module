@@ -1,0 +1,149 @@
+<?php
+
+/**
+ * @file
+ * Module compiles scss files into css via scssphp compiler.
+ */
+
+use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\scss_compiler\Form\ScssCompilerSystemPerformanceSettingsFormAlter;
+use Drupal\scss_compiler\ScssCompilerService;
+
+/**
+ * Implements hook_help().
+ */
+function scss_compiler_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.scss_compiler':
+      $readme = __DIR__ . '/README.md';
+      $text = file_get_contents($readme);
+      $output = '';
+
+      // If the Markdown module is installed, use it to render the README.
+      if ($text && \Drupal::moduleHandler()->moduleExists('markdown') === TRUE) {
+        $filter_manager = \Drupal::service('plugin.manager.filter');
+        $settings = \Drupal::configFactory()->get('markdown.settings')->getRawData();
+        $config = ['settings' => $settings];
+        $filter = $filter_manager->createInstance('markdown', $config);
+        $output = $filter->process($text, 'en');
+      }
+      // Else the Markdown module is not installed output the README as text.
+      elseif ($text) {
+        $output = '<pre>' . $text . '</pre>';
+      }
+
+      // Add a link to the Drupal.org project.
+      $output .= '<p>';
+      $output .= t('Visit the <a href="@project_link">SCSS Compiler project page</a> on Drupal.org for more information.', [
+        '@project_link' => 'https://www.drupal.org/project/scss_compiler',
+      ]);
+      $output .= '</p>';
+
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function scss_compiler_form_system_performance_settings_alter(&$form, FormStateInterface $form_state, $form_id) {
+  ScssCompilerSystemPerformanceSettingsFormAlter::formAlter($form, $form_state);
+}
+
+/**
+ * Recompiles all scss files.
+ */
+function scss_compiler_recompile() {
+  Drupal::service('scss_compiler')->flushCache();
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function scss_compiler_library_info_alter(&$libraries, $extension) {
+  // Find all scss files, and add it extension to file info
+  // to use it in hook_css_alter.
+  $plugins = \Drupal::service('scss_compiler')->getOption('plugins');
+  if (empty($plugins)) {
+    return;
+  }
+  $extensions = array_keys($plugins);
+  foreach ($libraries as &$library) {
+    if (!empty($library['css'])) {
+      foreach ($library['css'] as &$group) {
+        foreach ($group as $key => &$file) {
+          if (in_array(pathinfo($key, PATHINFO_EXTENSION), $extensions)) {
+            $file['namespace'] = $extension;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_css_alter().
+ */
+function scss_compiler_css_alter(&$css, AttachedAssetsInterface $assets) {
+  // Find all scss files and create associative array with info
+  // Each scss file has name, source_path, css_path,
+  // namespace - theme/module name, uses to build path to static resources.
+  $scss_files = [];
+  $plugins = \Drupal::service('scss_compiler')->getOption('plugins');
+  if (empty($plugins)) {
+    return;
+  }
+  $extensions = array_keys($plugins);
+  foreach ($css as $path => $file) {
+    if (in_array(pathinfo($path, PATHINFO_EXTENSION), $extensions)) {
+      $scss_file = Drupal::service('scss_compiler')->buildCompilationFileInfo($file);
+      if (empty($scss_file)) {
+        continue;
+      }
+
+      $scss_files[$scss_file['namespace']][$scss_file['source_path']] = $scss_file;
+      if (!file_exists($scss_file['css_path'])) {
+        Drupal::service('scss_compiler')->compile($scss_file);
+      }
+      unset($css[$path]);
+      $css[$scss_file['css_path']] = $file;
+      $css[$scss_file['css_path']]['data'] = $scss_file['css_path'];
+    }
+  }
+  // All scss files saves to compile list cache.
+  Drupal::service('scss_compiler')->setCompileList($scss_files);
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function scss_compiler_page_attachments_alter(array &$attachments) {
+  if (!Drupal::service('scss_compiler')->isCacheEnabled()) {
+    Drupal::service('scss_compiler')->compileAll();
+  }
+}
+
+/**
+ * Implements hook_cache_flush().
+ */
+function scss_compiler_cache_flush() {
+  if (Drupal::hasService('scss_compiler')) {
+    $config = \Drupal::config('scss_compiler.settings');
+    $flush_cache_type = $config->get('flush_cache_type');
+    switch ($flush_cache_type) {
+      case 'default':
+        if ($config->get('cache')) {
+          return;
+        }
+
+      case 'system':
+        $cache_folder = ScssCompilerService::CACHE_FOLDER;
+        if (Drupal::service('file_system')->prepareDirectory($cache_folder)) {
+          Drupal::service('file_system')->deleteRecursive($cache_folder);
+        }
+        break;
+    }
+  }
+}

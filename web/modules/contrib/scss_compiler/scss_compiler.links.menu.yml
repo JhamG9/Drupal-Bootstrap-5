@@ -1,0 +1,6 @@
+scss_compiler.flush_compiler:
+  title: 'Flush compiler cache'
+  route_name: scss_compiler.flush
+  parent: admin_toolbar_tools.help
+  menu_name: admin
+  weight: -9

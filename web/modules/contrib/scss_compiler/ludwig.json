@@ -1,0 +1,8 @@
+{
+  "require": {
+    "scssphp/scssphp": {
+      "version" : "v1.5.2",
+      "url": "https://github.com/scssphp/scssphp/archive/v1.5.2.zip"
+    }
+  }
+}

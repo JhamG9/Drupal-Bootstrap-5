@@ -76,6 +76,7 @@ class ComposerStaticInit02866b6269c4176d3f08df6747d3573d
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'SelfUpdate\\' => 11,
+            'ScssPhp\\ScssPhp\\' => 16,
         ),
         'R' => 
         array (
@@ -296,6 +297,10 @@ class ComposerStaticInit02866b6269c4176d3f08df6747d3573d
         array (
             0 => __DIR__ . '/..' . '/consolidation/self-update/src',
         ),
+        'ScssPhp\\ScssPhp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/scssphp/scssphp/src',
+        ),
         'Robo\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/robo/src',
@@ -415,8 +420,8 @@ class ComposerStaticInit02866b6269c4176d3f08df6747d3573d
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
-            1 => __DIR__ . '/..' . '/doctrine/common/src',
+            0 => __DIR__ . '/..' . '/doctrine/common/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
         ),
         'Dflydev\\DotAccessData\\' => 
         array (

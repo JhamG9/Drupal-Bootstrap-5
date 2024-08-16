@@ -1,0 +1,9 @@
+cache: false
+sourcemaps: true
+output_format: 'compressed'
+flush_cache_type: 'default'
+check_modify_time: true
+node_modules_path: ''
+plugins:
+  scss: 'scss_compiler_scssphp'
+  # less: 'scss_compiler_lessphp'

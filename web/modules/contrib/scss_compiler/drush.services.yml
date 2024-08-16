@@ -1,0 +1,6 @@
+services:
+  scss_compiler.commands:
+    class: \Drupal\scss_compiler\Commands\ScssCompilerCommands
+    arguments: ['@scss_compiler']
+    tags:
+      - { name: drush.command }

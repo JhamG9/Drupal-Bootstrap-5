@@ -1,0 +1,8 @@
+scss_compiler.flush:
+  path: '/admin/flush/scss_compiler'
+  defaults:
+    _controller: '\Drupal\scss_compiler\Controller\ScssCompilerController::flush'
+    _title: 'SCSS Compiler'
+  requirements:
+    _permission: 'administer site configuration'
+    _csrf_token: 'TRUE'
