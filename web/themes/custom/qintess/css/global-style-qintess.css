@@ -35,8 +35,36 @@ body {
     }
 
     @media screen and (max-width: 980px) {
-        font-size: 38px;
         padding-left: 35px;
+    }
+
+    @media screen and (max-width: 520px){
+        padding-left: 23px;
+    }
+}
+
+.title-content-cabecera {
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    strong {
+        color: #6800FF;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 980px) {
+        font-size: 38px;
+    }
+
+    @media screen and (max-width: 520px) {
+        font-size: 20px;
+        left: 24px;
+        line-height: 24px;
+        max-width: 260px;
     }
 
 }
@@ -45,15 +73,6 @@ body {
     max-width: 100%;
 }
 
-.field--name-field-titulo-cabecera {
-    position: absolute;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 60px;
-    color: #222222;
-    max-width: 720px;
-    text-transform: uppercase;
-}
 
 .field--name-field-titulo-cabecera {
     position: absolute;
@@ -106,13 +125,6 @@ body {
     .contenedor-cabecera {
         height: 230px;
     }
-
-    .field--name-field-titulo-cabecera {
-        font-size: 20px;
-        left: 24px;
-        line-height: 24px;
-        max-width: 260px;
-    }
 }
 
 /* BLOQUE CONTACTO */
@@ -128,7 +140,6 @@ body {
     line-height: 26px;
     font-size: 22px;
     color: #222222;
-    padding-top: 15px;
 }
 
 .webform-submission-contact-form {
@@ -314,7 +325,6 @@ body {
 
     @media screen and (max-width: 980px) {
         font-size: 14px !important;
-
     }
 }
 
