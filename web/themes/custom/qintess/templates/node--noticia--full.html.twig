@@ -1,0 +1,83 @@
+{{content.field_cabecera_noticia}}
+
+<div class="custom-container">
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 content-insight">
+			{{content.field_contenido_noticiai}}
+		</div>
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+			<div class="box-about">
+				<h4 class="box-about__title">About</h4>
+				<ul class="categories-box">
+					<li class="item-categorie">
+						<a class="item-categorie__categorie" href="echnology">Technology</a>
+					</li>
+					<li class="item-categorie">
+						<a class="item-categorie__categorie" href="echnology">Innovation</a>
+					</li>
+				</ul>
+
+				<p class="box-about__information">Writen by Tech Team</p>
+				<p class="box-about__information">Published on January 18th, 2023</p>
+				<button class="box-about__btn-share">Share</button>
+			</div>
+
+			<div class="related-insights">
+				<h4 class="related-insights__title">Related Insights</h4>
+				{# {{content.field_insights_relacionados}} #}
+            
+				{% for item in content.field_insights_relacionados['#items'] %}
+					{% set type_content = item.entity %}
+					
+                    
+                    {% for item2 in type_content %}
+                        {% set interno = item2.entity %}
+                          {% if interno.field_titulo_cabecera.value is defined %}
+                                <p>{{interno.field_titulo_cabecera.value | striptags}}</p>
+                          {% endif %}
+                        
+
+                    {% endfor %}
+                    
+
+				{% endfor %}
+
+				<div class="card-insight">
+					<div class="img-filter-gray" style="background-image: url(https://s3-alpha-sig.figma.com/img/faf8/9b3d/b2cd11db7d28324d4babcf1588c22991?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=R60w7awgO82nKejAaJ6y1cC43kP31VbZEiLIPzROXzMxD9GvgnklraiO0zcIhbXmH43ubsyWTcpHAQqtEOTWaEs3WJHSzVm5yOWYDApF6UDDuH9nz4zaJA0zkIdwYscUfPVwCk4TkWrEOGPGRwXQ6KF9Jg1G6hVn7ryi~ei~fjyKgJJp2XHsCfB6pvNF7bVSgQ-E4Ok1eSgLbgE3JnNITzBWOyzSzag3Ghp0bgNpLYovsX4JtSXowXIradQ37iXb-LFRwG2BOA4IZoqFaFqdWpR1pBgL~Z2GXxWFRyo-rS~UxgocKsQOHrGUxYtNzbHYb9J1hN3GS0s1qpvNrIQwiQ__);"></div>
+					<div class="gradient-hover"></div>
+					<div class="info-card-insight">
+						<div class="categories-card-insight">
+							<p class="categories-card-insight__categorie">Innovation</p>
+							<p class="categories-card-insight__categorie">Innovation</p>
+						</div>
+						<h5 class="categories-card-insight__title">Machine Learning: Using AI for Your Business</h5>
+					</div>
+				</div>
+
+				<div class="card-insight">
+					<div class="img-filter-gray" style="background-image: url(https://s3-alpha-sig.figma.com/img/faf8/9b3d/b2cd11db7d28324d4babcf1588c22991?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=R60w7awgO82nKejAaJ6y1cC43kP31VbZEiLIPzROXzMxD9GvgnklraiO0zcIhbXmH43ubsyWTcpHAQqtEOTWaEs3WJHSzVm5yOWYDApF6UDDuH9nz4zaJA0zkIdwYscUfPVwCk4TkWrEOGPGRwXQ6KF9Jg1G6hVn7ryi~ei~fjyKgJJp2XHsCfB6pvNF7bVSgQ-E4Ok1eSgLbgE3JnNITzBWOyzSzag3Ghp0bgNpLYovsX4JtSXowXIradQ37iXb-LFRwG2BOA4IZoqFaFqdWpR1pBgL~Z2GXxWFRyo-rS~UxgocKsQOHrGUxYtNzbHYb9J1hN3GS0s1qpvNrIQwiQ__);"></div>
+					<div class="gradient-hover"></div>
+					<div class="info-card-insight">
+						<div class="categories-card-insight">
+							<p class="categories-card-insight__categorie">Innovation</p>
+							<p class="categories-card-insight__categorie">Innovation</p>
+						</div>
+						<h5 class="categories-card-insight__title">Machine Learning: Using AI for Your Business</h5>
+					</div>
+				</div>
+
+				<div class="card-insight">
+					<div class="img-filter-gray" style="background-image: url(https://s3-alpha-sig.figma.com/img/faf8/9b3d/b2cd11db7d28324d4babcf1588c22991?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=R60w7awgO82nKejAaJ6y1cC43kP31VbZEiLIPzROXzMxD9GvgnklraiO0zcIhbXmH43ubsyWTcpHAQqtEOTWaEs3WJHSzVm5yOWYDApF6UDDuH9nz4zaJA0zkIdwYscUfPVwCk4TkWrEOGPGRwXQ6KF9Jg1G6hVn7ryi~ei~fjyKgJJp2XHsCfB6pvNF7bVSgQ-E4Ok1eSgLbgE3JnNITzBWOyzSzag3Ghp0bgNpLYovsX4JtSXowXIradQ37iXb-LFRwG2BOA4IZoqFaFqdWpR1pBgL~Z2GXxWFRyo-rS~UxgocKsQOHrGUxYtNzbHYb9J1hN3GS0s1qpvNrIQwiQ__);"></div>
+					<div class="gradient-hover"></div>
+					<div class="info-card-insight">
+						<div class="categories-card-insight">
+							<p class="categories-card-insight__categorie">Innovation</p>
+							<p class="categories-card-insight__categorie">Innovation</p>
+						</div>
+						<h5 class="categories-card-insight__title">Machine Learning: Using AI for Your Business</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
